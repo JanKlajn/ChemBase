@@ -1,0 +1,9 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <ul>
+        {% for producer in producers %}
+            <li>{% include 'producer_detail_list.html' %}</li>
+        {% endfor %}
+    </ul>
+{% endblock %}

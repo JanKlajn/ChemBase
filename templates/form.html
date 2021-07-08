@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <form method="post">
+        {% csrf_token %}
+        {{ forrm.as_p }}
+        <input type="submit">
+    </form>
+
+    <ul>
+        {% for obj in object_list %}
+        <li><a href="{{ obj.get_absolute_url }}">{{ obj }}</a></li>
+        {% endfor %}
+    </ul>
+
+{% endblock %}
